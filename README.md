@@ -145,6 +145,53 @@ workflow files glue together existing actions in sequence.
 | :-----------:       | :---------: |
 | Automatic updates   | Open source |
 | Managed and mainained by GitHub| Automatic updates for self-hosted runnerapplication only |
-| clean isntance for every job execution| customizable |
+| clean instance for every job execution| customizable |
 | Pricing             | Responsible ofr cost of runner machines |
 |                     | **GitHub does not recommend self-hosted runners for public repositories** |
+
+## Configuring Self-Hosted Runners
+
+- Download and extract the scripts.
+- configure and authenticate the runner with the token.
+- Start listening for jobs.
+
+## Runner groups
+
+- Configure on enterprise and/or organization level.
+- Scope to specific organizations and/or repositories.
+- Move runners between groups.
+- **A runnercan only be in one group at a time**
+
+## Runner Node Configuration
+
+### Best practices
+
+- Create a dedicated user for the actions runner
+- Enable limited sudo
+- Multiple pools with specific tools
+
+## Securty risks of public runners
+
+Public repositories with self-hosted runners pose potential risks.
+
+- Malicious programs run on the machine
+- Escape the machine's runner sandbox
+- Expose access to machine's network
+- Persist unwanted/dangerous data.
+
+## GitHub Actions Secrets Management
+
+### GitHub Secrets
+
+- GITHUB_TOKEN are secrets that are already part of github.
+- **secrets.<"NAME">** are secrets that can be created
+- Secrets can be accessed using UI or CLI
+
+## **Difference between Organization and Repository secrets**
+
+| Organization       | Repository |
+| :-----------:       | :---------: |
+| Allows secret management at org level without duplication  | Scoped to Repository |
+| Effectively becomes repo secret| can be used to override org secrets |
+| Can be scoped to specific repos|  |
+| Not available with the free plan  | Available with the free plan |

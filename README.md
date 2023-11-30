@@ -68,3 +68,14 @@ workflow files glue together existing actions in sequence.
 - Logs streaming & artifacts
 - Secret store with each repo or organization. 
 
+## 3. Actions
+
+- Reusable units of code
+- Referencing vs authoring actions
+- Administrative features
+  - It's adviced not to limit actions on the market place, instead, a code review should be done after an actions from marketplace is used.
+- Storing shared Actions
+  - If you decide to share actions, the repo must be plublic.
+- Post your Actions to the GitHub market place.
+
+| 

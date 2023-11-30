@@ -195,3 +195,12 @@ Public repositories with self-hosted runners pose potential risks.
 | Effectively becomes repo secret| can be used to override org secrets |
 | Can be scoped to specific repos|  |
 | Not available with the free plan  | Available with the free plan |
+
+## **Environment Secrets**
+
+- Apply to a specific environment
+- Override Org ? Repo secrets
+- Only users with environment permissions can add / edit
+
+---
+![image](secrets-hierarchy.png)

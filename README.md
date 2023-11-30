@@ -78,4 +78,10 @@ workflow files glue together existing actions in sequence.
   - If you decide to share actions, the repo must be plublic.
 - Post your Actions to the GitHub market place.
 
-| 
+|             | JavaScript action | Conainter action  |
+| :---------: | ----------------- | ----------------- |
+| **Virtual Env** | Linux, MacOS, Win | Linux             | 
+| **Language**    | Anything that compiles to JavaScript | Any |
+| **Speed**       | ++                | +                 |
+| **User Experience** | ++            | +                 |
+

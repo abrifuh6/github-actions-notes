@@ -57,7 +57,7 @@ on:
 - .yaml syntax
 - .github/workflows (this is where you need to add your workflows folder)
 
-workflow files glue together existing actions in sequence. 
+workflow files glue together existing actions in sequence.
 
 - listen for particular events
 - Then run pre-existing actions
@@ -66,7 +66,7 @@ workflow files glue together existing actions in sequence.
 - Actions run in VMs (Linux, Win, Mac)
   - or Docker on Linux vm
 - Logs streaming & artifacts
-- Secret store with each repo or organization. 
+- Secret store with each repo or organization.
 
 ## 3. Actions
 
@@ -80,8 +80,71 @@ workflow files glue together existing actions in sequence.
 
 |             | JavaScript action | Conainter action  |
 | :---------: | ----------------- | ----------------- |
-| **Virtual Env** | Linux, MacOS, Win | Linux             | 
+| **Virtual Env** | Linux, MacOS, Win | Linux             |
 | **Language**    | Anything that compiles to JavaScript | Any |
 | **Speed**       | ++                | +                 |
 | **User Experience** | ++            | +                 |
 
+## Starter Workflows
+
+- You don't have to create workflows from scractch. Actions provide what we call starter workflows.
+- It's treconfigured for specific languages and frameworks.
+- Suggested workflows based on language and framework.
+- You can create your own workflows.
+
+## Troubleshooting and Best practices
+
+### Troubleshooting tools
+
+- Workflow editor
+- Action-debugging (both needs secrets set as true)
+  - ACTIONS_STEP_DEBUG (start with these first)
+  - ACTIONS_RUNNER_DEBUG
+- VS Code extension
+- Try locally: nektos/act
+
+### Best Practices
+
+- Versioning
+  - Do this so that it doesn't affect users using the previous version.
+- Documentation
+- Test Coverage
+- Maintain metadata
+
+## CI/CD with GitHub Actions
+
+- _CI/CD workflow with GitHub_
+- _Actions & CI_
+- _Actions, CD & release management_
+
+## Environments
+
+- Logical representation of your environments.
+- Dev - Test -QA - PreProd - Prod ...
+- Whole environment or "slice"
+- Can define their own secrets
+- Have protection rules.
+
+## Protection rules
+
+- Required reviewers
+- Wait timer
+  - can set wait timers before deployment.
+- Allowed branches
+- APIs for 3 <sup>rd</sup>  party integration
+
+## Deployment logs
+
+- Single or multiple environments
+- Complete history of deployment
+- Status of deployment
+
+## Runners
+
+| GitHub Hosted       | Self-Hosted |
+| :-----------:       | :---------: |
+| Automatic updates   | Open source |
+| Managed and mainained by GitHub| Automatic updates for self-hosted runnerapplication only |
+| clean isntance for every job execution| customizable |
+| Pricing             | Responsible ofr cost of runner machines |
+|                     | **GitHub does not recommend self-hosted runners for public repositories** |

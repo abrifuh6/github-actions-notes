@@ -204,3 +204,19 @@ Public repositories with self-hosted runners pose potential risks.
 
 ---
 ![image](secrets-hierarchy.png)
+
+## Secrets Limitations
+
+- Secrets cannot be read in apps
+  - Actions API does not provide a resource to the encrypted value
+
+- By default, secrets are not passed to workflows triggered by forked repos. You can enable this for private repos.
+- Workflows can have up to 100 secrets
+- Secrets are limited to 64K in size
+  - Use `gpg` to encrypt larger secrets on the repository 
+
+## GitHub Actions API
+
+- Endpoints are available to view anything from the Actions UI
+- Artifacts, worklfows, job info, run info
+- Secrets API to manage and update your secrets stores

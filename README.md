@@ -220,3 +220,5 @@ Public repositories with self-hosted runners pose potential risks.
 - Endpoints are available to view anything from the Actions UI
 - Artifacts, worklfows, job info, run info
 - Secrets API to manage and update your secrets stores
+
+~~**Links to GitGub actions projects will be pasted here**~~

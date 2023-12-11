@@ -1,0 +1,23 @@
+name: nodejs-CICD
+
+on:
+   push:
+    branches: [master]
+
+jobs:
+    build:
+        runs-on: [ubuntu-latest]
+        steps:
+            - name: Checkout Source Code
+              uses: actions/checkout@v4
+            - name: Login to DockerHub
+              run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+            - name: Build Docker Image
+              run: docker build -t buamtech/nodejs-app .
+            - name: Push image to DockerHub
+              run: docker push buamtech/nodejs-app:latest
+
+    deploy:
+        needs: build
+        runs-on:
+          - self-hosted
